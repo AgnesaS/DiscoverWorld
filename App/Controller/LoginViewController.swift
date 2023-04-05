@@ -16,25 +16,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         self.navigationItem.setHidesBackButton(true, animated: true)
         super.viewDidLoad()
-//        emailTextField.text = "agnesasel@gmail.com"
-//        passwordTextField.text = "12345"
+        emailTextField.text = "agnesasel@gmail.com"
+        passwordTextField.text = "12345"
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        validateFields()
-        if isValidEmail(emailTextField.text ?? "") {
-            if segue.identifier == "goToHome"{
-                print("Pushed to HomeViewController")
-                if let homeViewController = segue.destination as? HomeViewController
-                {
-                    let user = UserModel(name: "Welcome", username: "back")
-                    homeViewController.user = user
-                }
-            }
-        }
-        else{
-            self.showAlertWith(title: "Discover Europe", message: "Please enter a valid email address".localizableString())
-        }
-    }
+    
     //MARK: Functions
     func validateFields(){
         guard let email = emailTextField.text, !email.isEmpty else {
@@ -54,6 +39,19 @@ class LoginViewController: UIViewController {
         return emailPred.evaluate(with: email)
     }
     //MARK: IBActions
+    @IBAction func loginButtonTapped(_ sender: Any) {
+        validateFields()
+        if isValidEmail(emailTextField.text ?? "") {
+                let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+              
+                self.navigationController?.pushViewController(storyboard, animated: true)
+               
+            }
+        else{
+            self.showAlertWith(title: "Discover Europe", message: "Please enter a valid email address".localizableString())
+        }
+    }
+        
     @IBAction func signupButtonTapped(_ sender: Any) {
         let storyboard = self.storyboard?.instantiateViewController(identifier: "SignupViewController") as! SignupViewController
         self.navigationController?.pushViewController(storyboard, animated: true)

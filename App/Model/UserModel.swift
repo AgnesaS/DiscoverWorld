@@ -13,14 +13,13 @@ struct IntroScreenModel {
     let image: UIImage
 }
 
-struct HomeModel{
+struct StateModel{
     let title: String
-    let image: UIImage
-   // let description: String
 }
-struct UserModel{
-    let name: String
-    let username: String
+struct CityModel{
+    let title: String
+    let description: String
+    let image: UIImage
 }
 
 

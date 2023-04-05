@@ -51,8 +51,7 @@ class SignupViewController: UIViewController {
         validateFields()
         if isValidEmail(emailTextField.text ?? ""){
             let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            let user = UserModel(name: "New", username: "Member")
-            storyboard.user = user
+          
             self.navigationController?.pushViewController(storyboard, animated: true)
         }else {
             self.showAlertWith(title: "Discover World", message: "Please enter a valid email address".localizableString())
