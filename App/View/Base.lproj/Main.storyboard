@@ -650,12 +650,12 @@
         <!--Settings-->
         <scene sceneID="7Qs-ah-zed">
             <objects>
-                <viewController id="Tz7-F7-qsR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tz7-F7-qsR" customClass="SettingsViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LNi-Gd-Gdm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="nQO-IU-D2R"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.78823529411764703" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" selectedImage="gearshape" id="WEi-2D-7jC"/>
                 </viewController>
@@ -666,12 +666,12 @@
         <!--Location-->
         <scene sceneID="wyl-sR-aZw">
             <objects>
-                <viewController id="rwD-oA-Z8c" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationViewController" title="Location" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rwD-oA-Z8c" customClass="LocationViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sn9-GT-9FC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pHB-k2-qOm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.74509803921568629" green="0.70588235294117641" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Location" image="location" catalog="system" selectedImage="location.fill" id="koL-rZ-J6d"/>
                 </viewController>
@@ -682,12 +682,12 @@
         <!--Add-->
         <scene sceneID="cfv-aq-x6j">
             <objects>
-                <viewController id="GFk-o8-9Pl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddExperienceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GFk-o8-9Pl" customClass="AddExperienceViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C87-vV-PCT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FiP-D9-Iok"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.82745098039215681" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="plus.circle" catalog="system" selectedImage="plus.circle.fill" id="oWL-GD-l1h"/>
                 </viewController>
@@ -698,12 +698,12 @@
         <!--Profile-->
         <scene sceneID="fn2-Ae-wOe">
             <objects>
-                <viewController id="AUe-Vx-mOJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AUe-Vx-mOJ" customClass="ProfileViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kLf-c5-bvo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="mjL-X8-gbl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.81960784313725488" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person.fill" id="SVH-4F-c1B"/>
                 </viewController>
@@ -1356,10 +1356,10 @@
             </objects>
             <point key="canvasLocation" x="2271" y="-27"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="k3B-rP-Tdn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iba-27-hIx" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iba-27-hIx" customClass="TabBarViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6jr-1z-dgu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hn5-M3-ggM">
