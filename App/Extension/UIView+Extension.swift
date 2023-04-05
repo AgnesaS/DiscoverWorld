@@ -2,7 +2,17 @@
 //  UIView+Extension.swift
 //  App
 //
-//  Created by Agnesa  on 13.3.23.
+//  Created by FatjonaHoti  on 13.3.23.
 //
 
-import Foundation
+import UIKit
+
+extension UIView {
+   @IBInspectable var cornerRadius: CGFloat{
+        get { return cornerRadius }
+        set {
+            self.layer.cornerRadius = newValue
+        }
+    }
+}
+

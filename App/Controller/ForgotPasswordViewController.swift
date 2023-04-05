@@ -24,7 +24,7 @@ class ForgotPasswordViewController: UIViewController {
             self.showAlertWith(title: "Discover the World", message: "Please enter your email".localizableString())
             return
         }
-        guard let newPassword = newPasswordTextField.text, !newPassword.isEmpty else {
+        guard let newPasswordd = newPasswordTextField.text, !newPasswordd.isEmpty else {
             self.newPasswordTextField.becomeFirstResponder()
             self.showAlertWith(title: "Discover the  World", message: "Please enter your old password".localizableString())
             return
@@ -34,7 +34,7 @@ class ForgotPasswordViewController: UIViewController {
             self.showAlertWith(title: "Discover the World", message: "Please enter your new password".localizableString())
             return
     }
-        guard (newPassword == repeatNewPassword) else {
+        guard (newPasswordd == repeatNewPassword) else {
             self.showAlertWith(title: "Discover the World", message: "Passwords doesn't match".localizableString())
             return
         }

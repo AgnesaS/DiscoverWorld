@@ -348,7 +348,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="fxD-1g-llg" kind="push" identifier="goToHome" id="Dm1-xE-Cc2"/>
+                                                            <segue destination="iba-27-hIx" kind="push" identifier="goToHome" id="Dm1-xE-Cc2"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2h-qg-nvP">
@@ -552,7 +552,7 @@
             </objects>
             <point key="canvasLocation" x="3673" y="656"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="GGr-xc-uK1">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fxD-1g-llg" customClass="HomeViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
@@ -561,7 +561,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1C4-8e-TEp">
-                                <rect key="frame" x="10" y="130.66666666666669" width="373" height="687.33333333333326"/>
+                                <rect key="frame" x="10" y="130.66666666666669" width="373" height="638.33333333333326"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y3l-h8-k7c">
                                     <size key="itemSize" width="319" height="322"/>
@@ -635,6 +635,7 @@
                             <constraint firstAttribute="trailing" secondItem="1C4-8e-TEp" secondAttribute="trailing" constant="10" id="wmF-zw-z2M"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="vWN-tf-U8c"/>
                     <navigationItem key="navigationItem" id="mbQ-jl-S30"/>
                     <connections>
                         <outlet property="collectionView" destination="1C4-8e-TEp" id="OaY-Lw-thZ"/>
@@ -644,7 +645,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncu-BA-cQe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3674" y="-27"/>
+            <point key="canvasLocation" x="4373" y="-27"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="7Qs-ah-zed">
+            <objects>
+                <viewController id="Tz7-F7-qsR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LNi-Gd-Gdm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nQO-IU-D2R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" selectedImage="gearshape" id="WEi-2D-7jC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTw-Lm-19N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4372" y="663"/>
+        </scene>
+        <!--Location-->
+        <scene sceneID="wyl-sR-aZw">
+            <objects>
+                <viewController id="rwD-oA-Z8c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sn9-GT-9FC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pHB-k2-qOm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Location" image="location" catalog="system" selectedImage="location.fill" id="koL-rZ-J6d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MgK-Yf-qld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5109" y="-27"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="cfv-aq-x6j">
+            <objects>
+                <viewController id="GFk-o8-9Pl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C87-vV-PCT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FiP-D9-Iok"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add" image="plus.circle" catalog="system" selectedImage="plus.circle.fill" id="oWL-GD-l1h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbn-AL-uBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5787" y="-27"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="fn2-Ae-wOe">
+            <objects>
+                <viewController id="AUe-Vx-mOJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kLf-c5-bvo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mjL-X8-gbl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person.fill" id="SVH-4F-c1B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwL-q7-iPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5169" y="663"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="wQS-hr-j35">
@@ -1291,13 +1356,45 @@
             </objects>
             <point key="canvasLocation" x="2271" y="-27"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="k3B-rP-Tdn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iba-27-hIx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6jr-1z-dgu"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hn5-M3-ggM">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fxD-1g-llg" kind="relationship" relationship="viewControllers" id="G1b-2q-ZZv"/>
+                        <segue destination="rwD-oA-Z8c" kind="relationship" relationship="viewControllers" id="QUK-UC-KHt"/>
+                        <segue destination="GFk-o8-9Pl" kind="relationship" relationship="viewControllers" id="urw-H6-xFS"/>
+                        <segue destination="Tz7-F7-qsR" kind="relationship" relationship="viewControllers" id="Lrl-py-omr"/>
+                        <segue destination="AUe-Vx-mOJ" kind="relationship" relationship="viewControllers" id="tVN-8o-Wxw"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9c-hy-wm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3672.5190839694656" y="-27.464788732394368"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="736" height="1553"/>
         <image name="2" width="750" height="1125"/>
         <image name="ArrowBack" width="11" height="19"/>
         <image name="back" width="564" height="846"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="location" catalog="system" width="128" height="121"/>
+        <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="mainlogo" width="750" height="750"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus.circle" catalog="system" width="128" height="123"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
