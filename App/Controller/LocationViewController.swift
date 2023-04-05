@@ -1,5 +1,5 @@
 //
-//  TabBarViewController.swift
+//  LocationViewController.swift
 //  App
 //
 //  Created by Agnesa  on 5.4.23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+class LocationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
