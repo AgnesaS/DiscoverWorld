@@ -348,7 +348,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="loginButtonTapped:" destination="d5r-RO-6tt" eventType="touchUpInside" id="Ye2-E4-NLb"/>
+                                                            <segue destination="fxD-1g-llg" kind="push" identifier="goToHome" id="KTv-2C-sjy"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2h-qg-nvP">
@@ -561,7 +561,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1C4-8e-TEp">
-                                <rect key="frame" x="10" y="202" width="373" height="567"/>
+                                <rect key="frame" x="10" y="233" width="373" height="585"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y3l-h8-k7c">
                                     <size key="itemSize" width="319" height="322"/>
@@ -570,15 +570,20 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find your favorite place" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l62-Mw-KeB">
-                                <rect key="frame" x="20" y="59" width="353" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="20" y="103" width="353" height="33"/>
+                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hku-sZ-Cto">
-                                <rect key="frame" x="10" y="105" width="373" height="77"/>
+                                <rect key="frame" x="10" y="146" width="373" height="77"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="egk-fc-Uah"/>
@@ -595,7 +600,7 @@
                         <viewLayoutGuide key="safeArea" id="tEp-8d-DcQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1C4-8e-TEp" firstAttribute="top" secondItem="Hku-sZ-Cto" secondAttribute="bottom" constant="20" id="GRJ-vp-P3A"/>
+                            <constraint firstItem="1C4-8e-TEp" firstAttribute="top" secondItem="Hku-sZ-Cto" secondAttribute="bottom" constant="10" id="GRJ-vp-P3A"/>
                             <constraint firstItem="Hku-sZ-Cto" firstAttribute="top" secondItem="l62-Mw-KeB" secondAttribute="bottom" constant="10" id="JB2-UI-IKq"/>
                             <constraint firstItem="l62-Mw-KeB" firstAttribute="leading" secondItem="tEp-8d-DcQ" secondAttribute="leading" constant="20" id="JvC-xd-mgu"/>
                             <constraint firstItem="tEp-8d-DcQ" firstAttribute="trailing" secondItem="l62-Mw-KeB" secondAttribute="trailing" constant="20" id="Kor-N2-YHa"/>
@@ -1330,7 +1335,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="k3B-rP-Tdn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iba-27-hIx" customClass="TabBarViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iba-27-hIx" customClass="TabBarViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6jr-1z-dgu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hn5-M3-ggM">
@@ -1351,6 +1356,9 @@
             <point key="canvasLocation" x="3672.5190839694656" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KTv-2C-sjy"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="736" height="1553"/>
         <image name="2" width="750" height="1125"/>
