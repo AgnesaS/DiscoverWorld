@@ -13,7 +13,7 @@ struct IntroScreenModel {
     let image: UIImage
 }
 
-struct StateModel{
+struct StateModel: Equatable{
     let title: String
 }
 struct CityModel{

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,39 +17,55 @@
                 <rect key="frame" x="0.0" y="0.0" width="285" height="74"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="globe.americas.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Cvj-oq-vLq">
-                        <rect key="frame" x="5" y="6" width="35" height="62.666666666666671"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Trf-80-hb5">
+                        <rect key="frame" x="0.0" y="0.0" width="285" height="74"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlQ-fc-2IY">
+                                <rect key="frame" x="50" y="5" width="230" height="64"/>
+                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="worldwide" translatesAutoresizingMaskIntoConstraints="NO" id="Cvj-oq-vLq">
+                                <rect key="frame" x="5" y="5" width="40" height="64"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="QKt-Qy-Eac"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="35" id="46G-zk-Cki"/>
+                            <constraint firstAttribute="bottom" secondItem="Cvj-oq-vLq" secondAttribute="bottom" constant="5" id="Wi1-xb-Xo4"/>
+                            <constraint firstItem="Cvj-oq-vLq" firstAttribute="leading" secondItem="Trf-80-hb5" secondAttribute="leading" constant="5" id="aku-VG-TB2"/>
+                            <constraint firstItem="JlQ-fc-2IY" firstAttribute="leading" secondItem="Cvj-oq-vLq" secondAttribute="trailing" constant="5" id="mJR-at-olV"/>
+                            <constraint firstItem="JlQ-fc-2IY" firstAttribute="top" secondItem="Trf-80-hb5" secondAttribute="top" constant="5" id="ngq-ht-91f"/>
+                            <constraint firstAttribute="bottom" secondItem="JlQ-fc-2IY" secondAttribute="bottom" constant="5" id="rKw-LY-8G0"/>
+                            <constraint firstItem="Cvj-oq-vLq" firstAttribute="top" secondItem="Trf-80-hb5" secondAttribute="top" constant="5" id="rYe-Pf-FBs"/>
+                            <constraint firstAttribute="trailing" secondItem="JlQ-fc-2IY" secondAttribute="trailing" constant="5" id="tVt-su-Ob6"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlQ-fc-2IY">
-                        <rect key="frame" x="40" y="5" width="230" height="64"/>
-                        <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="JlQ-fc-2IY" firstAttribute="leading" secondItem="Cvj-oq-vLq" secondAttribute="trailing" id="7oj-Tz-gFN"/>
-                <constraint firstAttribute="trailing" secondItem="JlQ-fc-2IY" secondAttribute="trailing" constant="15" id="Ff9-BB-kis"/>
-                <constraint firstItem="JlQ-fc-2IY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="HaH-59-MhN"/>
-                <constraint firstItem="Cvj-oq-vLq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="OCx-bN-sWO"/>
-                <constraint firstItem="Cvj-oq-vLq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="StN-bw-OuP"/>
-                <constraint firstAttribute="bottom" secondItem="Cvj-oq-vLq" secondAttribute="bottom" constant="5" id="oiw-xu-wSt"/>
-                <constraint firstAttribute="bottom" secondItem="JlQ-fc-2IY" secondAttribute="bottom" constant="5" id="zx0-AO-6dt"/>
+                <constraint firstItem="Trf-80-hb5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F4q-hs-LwB"/>
+                <constraint firstAttribute="trailing" secondItem="Trf-80-hb5" secondAttribute="trailing" id="Iqb-CQ-7Av"/>
+                <constraint firstAttribute="bottom" secondItem="Trf-80-hb5" secondAttribute="bottom" id="JzW-qp-ppo"/>
+                <constraint firstItem="Trf-80-hb5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xSD-wO-gk7"/>
             </constraints>
             <size key="customSize" width="285" height="74"/>
             <connections>
-                <outlet property="stateTitleLabel" destination="JlQ-fc-2IY" id="x34-Ej-BG1"/>
+                <outlet property="containerView" destination="Trf-80-hb5" id="UOL-T7-Ylc"/>
+                <outlet property="stateTitleLabel" destination="JlQ-fc-2IY" id="RpE-h0-i16"/>
             </connections>
             <point key="canvasLocation" x="240.45801526717557" y="8.4507042253521139"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="globe.americas.fill" catalog="system" width="128" height="123"/>
+        <image name="worldwide" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

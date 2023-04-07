@@ -43,6 +43,7 @@ class LoginViewController: UIViewController {
         if segue.identifier == "goToHome"{
             if isValidEmail(emailTextField.text ?? "") {
                     let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+
                     self.navigationController?.pushViewController(storyboard, animated: true)
                    
                 }
