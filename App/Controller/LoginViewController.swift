@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class LoginViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -15,9 +16,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         self.navigationItem.setHidesBackButton(true, animated: true)
-        super.viewDidLoad()
-        emailTextField.text = "agnesasel@gmail.com"
-        passwordTextField.text = "12345"
+//        super.viewDidLoad()
+//        emailTextField.text = "agnesasel@gmail.com"
+//        passwordTextField.text = "12345"
+        
     }
     
     //MARK: Functions

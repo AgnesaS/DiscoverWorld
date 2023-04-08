@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class HomeViewController: UIViewController {
     //MARK: IBOutlets
@@ -17,6 +18,7 @@ class HomeViewController: UIViewController {
     var citiesArray1: [CityModel] = []
     var citiesArray2: [CityModel] = []
     var isSelectable = true
+  //  var selectedStateIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +68,7 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
         }else{
             return citiesArray1.count
         }
+        
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == statesCollectionView{
