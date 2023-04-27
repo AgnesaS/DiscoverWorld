@@ -225,11 +225,11 @@
                                                         <rect key="frame" x="30" y="408.33333333333331" width="354" height="50"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xyt-ZK-iCF" customClass="JiroTextField" customModule="TextFieldEffects">
-                                                                <rect key="frame" x="20" y="0.0" width="314" height="50"/>
+                                                                <rect key="frame" x="10" y="0.0" width="324" height="50"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="20"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                         <real key="value" value="25"/>
@@ -240,7 +240,7 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="xyt-ZK-iCF" secondAttribute="bottom" id="FPc-Ug-Ta9"/>
-                                                            <constraint firstItem="xyt-ZK-iCF" firstAttribute="leading" secondItem="LQl-Us-o5u" secondAttribute="leading" constant="20" id="g0X-Vw-NrN"/>
+                                                            <constraint firstItem="xyt-ZK-iCF" firstAttribute="leading" secondItem="LQl-Us-o5u" secondAttribute="leading" constant="10" id="g0X-Vw-NrN"/>
                                                             <constraint firstItem="xyt-ZK-iCF" firstAttribute="top" secondItem="LQl-Us-o5u" secondAttribute="top" id="sZU-JK-O5O"/>
                                                             <constraint firstAttribute="trailing" secondItem="xyt-ZK-iCF" secondAttribute="trailing" constant="20" id="tuQ-Wi-hvR"/>
                                                             <constraint firstAttribute="height" constant="50" id="tyo-bx-Jwm"/>
@@ -267,7 +267,7 @@
                                                         <rect key="frame" x="30" y="473.33333333333331" width="354" height="49.999999999999943"/>
                                                         <subviews>
                                                             <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wqn-sY-9UJ" customClass="JiroTextField" customModule="TextFieldEffects">
-                                                                <rect key="frame" x="20" y="0.0" width="314" height="50"/>
+                                                                <rect key="frame" x="10" y="0.0" width="324" height="50"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="textColor" red="0.43137254899999999" green="0.43529411759999997" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="20"/>
@@ -276,7 +276,7 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstItem="Wqn-sY-9UJ" firstAttribute="leading" secondItem="wOU-mK-CLT" secondAttribute="leading" constant="20" id="S0V-S9-QoP"/>
+                                                            <constraint firstItem="Wqn-sY-9UJ" firstAttribute="leading" secondItem="wOU-mK-CLT" secondAttribute="leading" constant="10" id="S0V-S9-QoP"/>
                                                             <constraint firstAttribute="height" constant="50" id="Vei-Wt-kEb"/>
                                                             <constraint firstAttribute="bottom" secondItem="Wqn-sY-9UJ" secondAttribute="bottom" id="egG-ej-c6V"/>
                                                             <constraint firstAttribute="trailing" secondItem="Wqn-sY-9UJ" secondAttribute="trailing" constant="20" id="gtf-Xh-Xfl"/>
@@ -486,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hb8-Zd-u4f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2956" y="-27"/>
+            <point key="canvasLocation" x="2352" y="-27"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="0Vj-mV-c0j">
@@ -557,11 +557,11 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fxD-1g-llg" customClass="HomeViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pfS-Yk-k5v">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1C4-8e-TEp">
-                                <rect key="frame" x="10" y="233" width="373" height="536"/>
+                                <rect key="frame" x="10" y="130" width="373" height="663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Y3l-h8-k7c">
                                     <size key="itemSize" width="319" height="322"/>
@@ -577,13 +577,13 @@
                                 </userDefinedRuntimeAttributes>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find your favorite place" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l62-Mw-KeB">
-                                <rect key="frame" x="20" y="103" width="353" height="33"/>
+                                <rect key="frame" x="20" y="0.0" width="353" height="33"/>
                                 <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hku-sZ-Cto">
-                                <rect key="frame" x="10" y="146" width="373" height="77"/>
+                                <rect key="frame" x="10" y="43" width="373" height="77"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="egk-fc-Uah"/>
@@ -628,7 +628,7 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tz7-F7-qsR" customClass="SettingsViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LNi-Gd-Gdm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="nQO-IU-D2R"/>
                         <color key="backgroundColor" red="0.87450980392156863" green="0.78823529411764703" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -644,7 +644,7 @@
             <objects>
                 <viewController storyboardIdentifier="LocationViewController" title="Location" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rwD-oA-Z8c" customClass="LocationViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sn9-GT-9FC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pHB-k2-qOm"/>
                         <color key="backgroundColor" red="0.74509803921568629" green="0.70588235294117641" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -660,7 +660,7 @@
             <objects>
                 <viewController storyboardIdentifier="AddExperienceViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GFk-o8-9Pl" customClass="AddExperienceViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C87-vV-PCT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FiP-D9-Iok"/>
                         <color key="backgroundColor" red="0.85098039215686272" green="0.82745098039215681" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -676,7 +676,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="AUe-Vx-mOJ" customClass="ProfileViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kLf-c5-bvo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="mjL-X8-gbl"/>
                         <color key="backgroundColor" red="0.90588235294117647" green="0.81960784313725488" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1314,24 +1314,6 @@
             </objects>
             <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="iSd-nQ-MFY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbe-YB-HHl" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fHA-X6-w6e">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="d5r-RO-6tt" kind="relationship" relationship="rootViewController" id="ikT-pb-75H"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lZ3-kT-G57" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2271" y="-27"/>
-        </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="k3B-rP-Tdn">
             <objects>
@@ -1353,10 +1335,13 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9c-hy-wm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3672.5190839694656" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="3317" y="-27"/>
         </scene>
     </scenes>
     <designables>
+        <designable name="Wqn-sY-9UJ">
+            <size key="intrinsicContentSize" width="81.666666666666671" height="25"/>
+        </designable>
         <designable name="xyt-ZK-iCF">
             <size key="intrinsicContentSize" width="50" height="26.333333333333332"/>
         </designable>
