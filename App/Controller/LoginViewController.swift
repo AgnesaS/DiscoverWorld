@@ -40,19 +40,6 @@ class LoginViewController: UIViewController {
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        validateFields()
-//        if segue.identifier == "goToHome"{
-//            if isValidEmail(emailTextField.text ?? "") {
-//                    let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-//
-//                    self.navigationController?.pushViewController(storyboard, animated: true)
-//
-//                }
-//        }else{
-//            self.showAlertWith(title: "Discover Europe", message: "Please enter a valid email address".localizableString())
-//        }
-//    }
     //MARK: IBActions
     @IBAction func loginButtonTapped(_ sender: Any) {
         validateFields()

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CityCell: UICollectionViewCell {
 
@@ -17,9 +18,9 @@ class CityCell: UICollectionViewCell {
         // Initialization code
     }
     func setupCities(_ city:CityModel ){
-        cityImageView.image = city.image
-        titleLabel.text = city.title
-        descriptionLabel.text = city.description
+        cityImageView.kf.setImage(with: URL(string: city.image ?? ""))
+        titleLabel.text = "\(city.title ?? "") "
+//        emailLabel.text = user.email ?? ""
     }
 
 }

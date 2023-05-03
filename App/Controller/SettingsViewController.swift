@@ -6,24 +6,49 @@
 //
 
 import UIKit
+import Photos
+import SafariServices
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    var imagePicker: UIImagePickerController?
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupImagePicker()
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupImagePicker(){
+        imagePicker = UIImagePickerController()
+        imagePicker?.sourceType = .photoLibrary
+        imagePicker?.delegate = self
+        
+        PHPhotoLibrary.requestAuthorization{
+            status in
+                print("request authorization status = \(status)")
+        }
     }
-    */
-
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        profileImage.image = selectedImage
+        imagePicker?.dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        imagePicker?.dismiss(animated: true)
+    }
+    @IBAction func pickerButton(_ sender: Any) {
+        if PHPhotoLibrary.authorizationStatus() == .authorized{
+            if let imagePic = imagePicker{
+                present(imagePic, animated: true)
+            }
+        }
+    }
+    @IBAction func goToPrivacyPolicyLink(_ sender: Any) {
+        let svc = SFSafariViewController(url: URL(string:"https://www.smooth-on.com/page/privacy-policy/?pk_campaign=dynamicsearch&pk_kwd=&gclid=CjwKCAjwjMiiBhA4EiwAZe6jQzxXzebtYuU3Fys66YEXyJo6mUhYZPDLn7UI9iPTxAfNxp0nn-bRZRoCtgYQAvD_BwE")!)
+        self.present(svc, animated: true, completion: nil)
+    }
+    
 }
