@@ -19,7 +19,8 @@ class CityCell: UICollectionViewCell {
     }
     func setupCities(_ city:CityModel ){
         cityImageView.kf.setImage(with: URL(string: city.image ?? ""))
-        titleLabel.text = "\(city.title ?? "") "
+        titleLabel.text = city.title ?? ""
+        descriptionLabel.text = city.category ?? ""
 //        emailLabel.text = user.email ?? ""
     }
 
