@@ -51,4 +51,9 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         self.present(svc, animated: true, completion: nil)
     }
     
+    @IBAction func aboutUsButtonTapped(_ sender: Any) {
+        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
+
+        self.navigationController?.pushViewController(storyboard, animated: true)
+    }
 }

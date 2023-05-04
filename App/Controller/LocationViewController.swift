@@ -8,22 +8,24 @@
 import UIKit
 
 class LocationViewController: UIViewController {
-
+    @IBOutlet weak var logoImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+               
+        UIView.animate(withDuration: 1, delay: 0, options: [.repeat, .autoreverse]) {
+            self.logoImageView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+        }
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func allowLocationButtonTapped(_ sender: Any) {
+        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "LocationDetailsViewController") as! LocationDetailsViewController
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        self.navigationController?.pushViewController(storyboard, animated: true)
     }
-    */
-
+    
+    @IBAction func maybeLaterButtonTapped(_ sender: Any) {
+    }
 }

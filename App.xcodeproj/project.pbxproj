@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4D13D2A029FA91C1000A781C /* CityRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D13D29F29FA91C1000A781C /* CityRequests.swift */; };
+		4D2655F32A03BF7500B4451B /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2655F22A03BF7500B4451B /* LocationDetailsViewController.swift */; };
+		4D2655F52A03D9B300B4451B /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2655F42A03D9B300B4451B /* AboutUsViewController.swift */; };
 		4D72634029BF45E2003D0EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72633F29BF45E2003D0EA8 /* AppDelegate.swift */; };
 		4D72634229BF45E2003D0EA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72634129BF45E2003D0EA8 /* SceneDelegate.swift */; };
 		4D72634429BF45E2003D0EA8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72634329BF45E2003D0EA8 /* SplashViewController.swift */; };
@@ -28,7 +30,6 @@
 		4DDA034429DE0AD700934E29 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA034329DE0AD700934E29 /* LocationViewController.swift */; };
 		4DDA034629DE0AF100934E29 /* AddExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA034529DE0AF100934E29 /* AddExperienceViewController.swift */; };
 		4DDA034829DE0B0000934E29 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA034729DE0B0000934E29 /* SettingsViewController.swift */; };
-		4DDA034A29DE0B1400934E29 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA034929DE0B1400934E29 /* ProfileViewController.swift */; };
 		4DDA035229DE181D00934E29 /* StateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA035029DE181D00934E29 /* StateCell.swift */; };
 		4DDA035329DE181D00934E29 /* StateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DDA035129DE181D00934E29 /* StateCell.xib */; };
 		4DDA035829DE1D4700934E29 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA035629DE1D4700934E29 /* CityCell.swift */; };
@@ -40,6 +41,8 @@
 		28D67EF5ECEBE9F7312FF941 /* Pods-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.debug.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.debug.xcconfig"; sourceTree = "<group>"; };
 		43B2FC948346A8B41A1BD812 /* Pods_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D13D29F29FA91C1000A781C /* CityRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRequests.swift; sourceTree = "<group>"; };
+		4D2655F22A03BF7500B4451B /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		4D2655F42A03D9B300B4451B /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		4D72633C29BF45E2003D0EA8 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D72633F29BF45E2003D0EA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D72634129BF45E2003D0EA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		4DDA034329DE0AD700934E29 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		4DDA034529DE0AF100934E29 /* AddExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExperienceViewController.swift; sourceTree = "<group>"; };
 		4DDA034729DE0B0000934E29 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		4DDA034929DE0B1400934E29 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4DDA035029DE181D00934E29 /* StateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCell.swift; sourceTree = "<group>"; };
 		4DDA035129DE181D00934E29 /* StateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateCell.xib; sourceTree = "<group>"; };
 		4DDA035629DE1D4700934E29 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
@@ -144,9 +146,10 @@
 		4D72635529BF48A2003D0EA8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4DDA034929DE0B1400934E29 /* ProfileViewController.swift */,
+				4D2655F42A03D9B300B4451B /* AboutUsViewController.swift */,
 				4DDA034729DE0B0000934E29 /* SettingsViewController.swift */,
 				4DDA034529DE0AF100934E29 /* AddExperienceViewController.swift */,
+				4D2655F22A03BF7500B4451B /* LocationDetailsViewController.swift */,
 				4DDA034329DE0AD700934E29 /* LocationViewController.swift */,
 				4D72637529C3446E003D0EA8 /* DetailsViewController.swift */,
 				4D72636629C08C32003D0EA8 /* HomeViewController.swift */,
@@ -334,16 +337,17 @@
 				4DDA034629DE0AF100934E29 /* AddExperienceViewController.swift in Sources */,
 				4D72636129BF79CA003D0EA8 /* LoginViewController.swift in Sources */,
 				4D72636729C08C32003D0EA8 /* HomeViewController.swift in Sources */,
-				4DDA034A29DE0B1400934E29 /* ProfileViewController.swift in Sources */,
 				4D72635F29BF5650003D0EA8 /* IntroCollectionViewCell.swift in Sources */,
 				4D72637229C31ACC003D0EA8 /* ForgotPasswordViewController.swift in Sources */,
 				4DDA035829DE1D4700934E29 /* CityCell.swift in Sources */,
+				4D2655F32A03BF7500B4451B /* LocationDetailsViewController.swift in Sources */,
 				4D72635929BF49C0003D0EA8 /* UserModel.swift in Sources */,
 				4D72637629C3446E003D0EA8 /* DetailsViewController.swift in Sources */,
 				4D72635429BF4677003D0EA8 /* IntroViewController.swift in Sources */,
 				4DDA034229DE0A8200934E29 /* TabBarViewController.swift in Sources */,
 				4D72636929C094A5003D0EA8 /* UIViewControllers+Alerts.swift in Sources */,
 				4DDA034429DE0AD700934E29 /* LocationViewController.swift in Sources */,
+				4D2655F52A03D9B300B4451B /* AboutUsViewController.swift in Sources */,
 				4DDA034829DE0B0000934E29 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
