@@ -56,4 +56,11 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
 
         self.navigationController?.pushViewController(storyboard, animated: true)
     }
+  
+    @IBAction func signOutTapped(_ sender: UITapGestureRecognizer) {
+        let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+
+        self.navigationController?.pushViewController(storyboard, animated: true)
+    }
+    
 }
