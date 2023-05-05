@@ -29,7 +29,7 @@
 		4D72637629C3446E003D0EA8 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D72637529C3446E003D0EA8 /* DetailsViewController.swift */; };
 		4DDA034229DE0A8200934E29 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA034129DE0A8200934E29 /* TabBarViewController.swift */; };
 		4DDA034429DE0AD700934E29 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA034329DE0AD700934E29 /* LocationViewController.swift */; };
-		4DDA034629DE0AF100934E29 /* AddExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA034529DE0AF100934E29 /* AddExperienceViewController.swift */; };
+		4DDA034629DE0AF100934E29 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA034529DE0AF100934E29 /* MenuViewController.swift */; };
 		4DDA034829DE0B0000934E29 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA034729DE0B0000934E29 /* SettingsViewController.swift */; };
 		4DDA035229DE181D00934E29 /* StateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA035029DE181D00934E29 /* StateCell.swift */; };
 		4DDA035329DE181D00934E29 /* StateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DDA035129DE181D00934E29 /* StateCell.xib */; };
@@ -65,7 +65,7 @@
 		4D72637529C3446E003D0EA8 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		4DDA034129DE0A8200934E29 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		4DDA034329DE0AD700934E29 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		4DDA034529DE0AF100934E29 /* AddExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExperienceViewController.swift; sourceTree = "<group>"; };
+		4DDA034529DE0AF100934E29 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4DDA034729DE0B0000934E29 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4DDA035029DE181D00934E29 /* StateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateCell.swift; sourceTree = "<group>"; };
 		4DDA035129DE181D00934E29 /* StateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateCell.xib; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 			children = (
 				4D2655F42A03D9B300B4451B /* AboutUsViewController.swift */,
 				4DDA034729DE0B0000934E29 /* SettingsViewController.swift */,
-				4DDA034529DE0AF100934E29 /* AddExperienceViewController.swift */,
+				4DDA034529DE0AF100934E29 /* MenuViewController.swift */,
 				4D2655F22A03BF7500B4451B /* LocationDetailsViewController.swift */,
 				4DDA034329DE0AD700934E29 /* LocationViewController.swift */,
 				4D72637529C3446E003D0EA8 /* DetailsViewController.swift */,
@@ -346,7 +346,7 @@
 				4D72634029BF45E2003D0EA8 /* AppDelegate.swift in Sources */,
 				4D72634229BF45E2003D0EA8 /* SceneDelegate.swift in Sources */,
 				4DDA035229DE181D00934E29 /* StateCell.swift in Sources */,
-				4DDA034629DE0AF100934E29 /* AddExperienceViewController.swift in Sources */,
+				4DDA034629DE0AF100934E29 /* MenuViewController.swift in Sources */,
 				4D72636129BF79CA003D0EA8 /* LoginViewController.swift in Sources */,
 				4D72636729C08C32003D0EA8 /* HomeViewController.swift in Sources */,
 				4D72635F29BF5650003D0EA8 /* IntroCollectionViewCell.swift in Sources */,

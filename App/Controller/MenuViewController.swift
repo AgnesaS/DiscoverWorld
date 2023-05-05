@@ -7,8 +7,8 @@
 
 import UIKit
 
-class AddExperienceViewController: UIViewController {
-    
+class MenuViewController: UIViewController {
+    //MARK: IBOutles
     @IBOutlet var containerView: UIView!
     @IBOutlet var viewBG: UIImageView!
     @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
@@ -23,28 +23,21 @@ class AddExperienceViewController: UIViewController {
                              option(title: "Terms and Conditions", segue: "TermsSegue"),
                              option(title: "Privacy Policy", segue: "PrivacySegue")
                             ]
-    
     struct option {
         var title = String()
         var segue = String()
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         menuTableView.delegate = self
         menuTableView.dataSource = self
         menuTableView.backgroundColor = .clear
-        
         home = self.containerView.transform
-        
     }
-    
-
-    
+//MARK: IBFunctions
     func showMenu() {
-        
         self.containerView.layer.cornerRadius = 40
         self.viewBG.layer.cornerRadius = self.containerView.layer.cornerRadius
         let x = screen.width * 0.8
@@ -53,69 +46,35 @@ class AddExperienceViewController: UIViewController {
             let scaledAndTranslatedTransform = scaledTransform.translatedBy(x: x, y: 0)
             UIView.animate(withDuration: 0.7, animations: {
                 self.containerView.transform = scaledAndTranslatedTransform
-                
             })
-        
     }
-    
     func hideMenu() {
-        
             UIView.animate(withDuration: 0.7, animations: {
-                
                 self.containerView.transform = self.home
                 self.containerView.layer.cornerRadius = 0
                 self.viewBG.layer.cornerRadius = 0
-                
             })
-        
     }
-    
-    
-    
+//MARK: IBActions
     @IBAction func showMenu(_ sender: UISwipeGestureRecognizer) {
-        
         print("menu interaction")
-        
         if menu == false && swipeGesture.direction == .right {
-            
             print("user is showing menu")
-            
             showMenu()
-            
             menu = true
-            
         }
-        
     }
-    
-    
-    
     @IBAction func hideMenu(_ sender: Any) {
-        
         if menu == true {
-            
             print("user is hiding menu")
-            
             hideMenu()
-            
             menu = false
-            
         }
-        
-        
     }
-    
-    
-   
 }
-
-
-
-extension AddExperienceViewController: UITableViewDelegate, UITableViewDataSource {
+extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return options.count
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -142,7 +101,7 @@ extension AddExperienceViewController: UITableViewDelegate, UITableViewDataSourc
             
             // optional: perform a segue when tapped
             
-            // self.parent?.performSegue(withIdentifier: options[indexPath.row].segue, sender: self)
+             self.parent?.performSegue(withIdentifier: options[indexPath.row].segue, sender: self)
             
         }
     }

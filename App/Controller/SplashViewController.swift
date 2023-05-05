@@ -19,5 +19,8 @@ class ViewController: UIViewController {
             self.performSegue(withIdentifier: "OpenIntroScreen", sender: nil)
         }
     }
+    func checkIfFirstTime(){
+        
+    }
 }
 
