@@ -226,7 +226,7 @@
                                 <rect key="frame" x="-11" y="-22" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="kvD-4J-SJ0">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="kvD-4J-SJ0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     </imageView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7c-63-BLY">
@@ -1007,7 +1007,7 @@
                             <constraint firstItem="nQO-IU-D2R" firstAttribute="leading" secondItem="SOG-T2-Lwu" secondAttribute="leading" constant="11" id="vI7-iq-hzx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" selectedImage="gearshape" id="WEi-2D-7jC"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="WEi-2D-7jC"/>
                     <connections>
                         <outlet property="profileImage" destination="B5s-1b-Cug" id="Wbp-ub-dHZ"/>
                     </connections>
@@ -1986,8 +1986,8 @@
     <resources>
         <image name="2" width="750" height="1125"/>
         <image name="ArrowForward" width="9.3333330154418945" height="16"/>
+        <image name="back" width="564" height="846"/>
         <image name="belgium" width="564" height="705"/>
-        <image name="bg" width="4000" height="6000"/>
         <image name="bg.jpg" width="4000" height="6000"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
