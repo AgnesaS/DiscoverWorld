@@ -3,6 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1052,22 +1054,6 @@
             </objects>
             <point key="canvasLocation" x="5096" y="663"/>
         </scene>
-        <!--Location Details View Controller-->
-        <scene sceneID="68g-4t-DV5">
-            <objects>
-                <viewController storyboardIdentifier="LocationDetailsViewController" id="gOX-dW-gwi" customClass="LocationDetailsViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jqb-9F-i6n">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Iry-OG-63r"/>
-                        <color key="backgroundColor" systemColor="systemGrayColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="oXn-e1-fVX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s9O-3K-cBt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5785" y="662"/>
-        </scene>
         <!--Location-->
         <scene sceneID="wyl-sR-aZw">
             <objects>
@@ -1972,6 +1958,65 @@
             </objects>
             <point key="canvasLocation" x="5942.7480916030536" y="-27.464788732394368"/>
         </scene>
+        <!--Location Details View Controller-->
+        <scene sceneID="okK-Nz-bZy">
+            <objects>
+                <viewController storyboardIdentifier="LocationDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cTa-PP-E77" customClass="LocationDetailsViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VHq-Zp-SuE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your destination" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="XSz-if-7Z6">
+                                <rect key="frame" x="20" y="89" width="301.33333333333331" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JxO-hX-YiE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igO-5W-Eb1">
+                                <rect key="frame" x="323.33333333333331" y="89" width="49.666666666666686" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QiZ-e7-E5O"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="magnifyingglass.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="cTa-PP-E77" eventType="touchUpInside" id="gpc-Za-cUt"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pgj-hN-5QG">
+                                <rect key="frame" x="0.0" y="159" width="393" height="659"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m9C-63-SjZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pgj-hN-5QG" firstAttribute="top" secondItem="XSz-if-7Z6" secondAttribute="bottom" constant="20" id="1nH-A8-hPh"/>
+                            <constraint firstItem="igO-5W-Eb1" firstAttribute="centerY" secondItem="XSz-if-7Z6" secondAttribute="centerY" id="Djf-Uf-oGm"/>
+                            <constraint firstItem="XSz-if-7Z6" firstAttribute="top" secondItem="m9C-63-SjZ" secondAttribute="top" constant="30" id="T22-aY-KzZ"/>
+                            <constraint firstItem="igO-5W-Eb1" firstAttribute="leading" secondItem="XSz-if-7Z6" secondAttribute="trailing" constant="2" id="bC0-7V-2TA"/>
+                            <constraint firstItem="m9C-63-SjZ" firstAttribute="trailing" secondItem="igO-5W-Eb1" secondAttribute="trailing" constant="20" id="cTN-Gm-umy"/>
+                            <constraint firstItem="m9C-63-SjZ" firstAttribute="bottom" secondItem="Pgj-hN-5QG" secondAttribute="bottom" id="eH3-e9-7nE"/>
+                            <constraint firstItem="igO-5W-Eb1" firstAttribute="top" secondItem="XSz-if-7Z6" secondAttribute="top" id="gIh-db-iPW"/>
+                            <constraint firstItem="m9C-63-SjZ" firstAttribute="trailing" secondItem="Pgj-hN-5QG" secondAttribute="trailing" id="jQx-7P-8nR"/>
+                            <constraint firstItem="XSz-if-7Z6" firstAttribute="leading" secondItem="m9C-63-SjZ" secondAttribute="leading" constant="20" id="lfz-aa-NtS"/>
+                            <constraint firstItem="Pgj-hN-5QG" firstAttribute="leading" secondItem="m9C-63-SjZ" secondAttribute="leading" id="rhn-L0-ZOW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapKit" destination="Pgj-hN-5QG" id="S1k-l0-sFO"/>
+                        <outlet property="wheretoaddress" destination="XSz-if-7Z6" id="lvT-jL-u6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9h-sZ-V5U" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5943" y="663"/>
+        </scene>
     </scenes>
     <designables>
         <designable name="Wqn-sY-9UJ">
@@ -1999,6 +2044,7 @@
         <image name="location" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="logout1" width="24" height="24"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <image name="mainlogo" width="750" height="750"/>
         <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
         <image name="menucard" catalog="system" width="108" height="128"/>
@@ -2007,9 +2053,6 @@
         <image name="smallAvatar" width="40" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

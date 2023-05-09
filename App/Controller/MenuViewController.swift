@@ -17,11 +17,18 @@ class MenuViewController: UIViewController {
     let screen = UIScreen.main.bounds
     var menu = false
     var home = CGAffineTransform()
-    var options: [option] = [option(title: "Home", segue: "HomeSegue"),
-                             option(title: "Settings", segue: "SettingsSegue"),
-                             option(title: "Profile", segue: "ProfileSegue"),
-                             option(title: "Terms and Conditions", segue: "TermsSegue"),
-                             option(title: "Privacy Policy", segue: "PrivacySegue")
+    var options: [option] = [option(title: "Belgium", segue: "Belgium"),
+                             option(title: "Netherland", segue: "Netherland"),
+                             option(title: "England", segue: "England"),
+                             option(title: "Greece", segue: "Greece"),
+                             option(title: "Luksemburg", segue: "Luksemburg"),
+                             option(title: "Luksemburg", segue: "Luksemburg"),
+                             option(title: "Luksemburg", segue: "Luksemburg"),
+                             option(title: "Luksemburg", segue: "Luksemburg"),
+                             option(title: "Luksemburg", segue: "Luksemburg"),
+                             option(title: "Luksemburg", segue: "Luksemburg"),
+                             option(title: "Luksemburg", segue: "Luksemburg"),
+                             option(title: "Luksemburg", segue: "Luksemburg")
                             ]
     struct option {
         var title = String()
@@ -101,7 +108,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             
             // optional: perform a segue when tapped
             
-             self.parent?.performSegue(withIdentifier: options[indexPath.row].segue, sender: self)
+//             self.parent?.performSegue(withIdentifier: options[indexPath.row].segue, sender: self)
             
         }
     }
