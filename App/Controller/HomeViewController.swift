@@ -89,6 +89,7 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
            // cell2.layer.borderColor = UIColor.gray.cgColor
            // cell2.layer.cornerRadius = 20
             cell2.setupCities(citiesArray[indexPath.item])
+            cell2.delegate = self
             return cell2
         }
     }
@@ -113,4 +114,56 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
         }
     }
     
+}
+
+extension HomeViewController: CityDelegate{
+    func addToFavorite(city: CityModel) {
+        for i in 0...citiesArray.count - 1{
+            if city.id == citiesArray[i].id{
+                citiesArray[i].isFavorite = !citiesArray[i].isFavorite
+            }
+        }
+        citiesCollectionView.reloadData()
+    }
+    
+    func rateCity(city: CityModel) {
+        showAlertFor(city: city)
+    }
+    
+    
+}
+
+extension HomeViewController{
+    func showAlertFor(city: CityModel) {
+        let alert = UIAlertController(title: "Rate", message: "How do you rate \(city.title)?", preferredStyle: .alert)
+        
+        alert.addTextField { rateTextfield in
+            rateTextfield.placeholder = "Enter your rate here"
+            rateTextfield.keyboardType = .numberPad
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+        }
+        alert.addAction(cancel)
+        
+        let rate = UIAlertAction(title: "Rate", style: .default) { _ in
+            let rateValue = Int(alert.textFields?[0].text ?? "")
+        
+            //zevendesim per iterim
+//            let filteredRecipe = self.recipesArray.filter ({ $0.id == recipe.id }).first
+            
+            for i in 0...self.citiesArray.count - 1 {
+                if city.id == self.citiesArray[i].id {
+                    self.citiesArray[i].isRated = true
+                    if let rateValue = rateValue {
+                        self.citiesArray[i].rateValue = rateValue
+                    }
+                    self.citiesCollectionView.reloadData()
+                }
+            }
+        }
+        
+        alert.addAction(rate)
+        self.present(alert, animated: true)
+    }
 }

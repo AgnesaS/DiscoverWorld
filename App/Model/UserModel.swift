@@ -25,6 +25,9 @@ struct CityModel {
     var productDescription: String?
     var category: String?
     var image: String?
+    var isFavorite: Bool = false
+    var isRated: Bool = false
+    var rateValue: Int = 0
     
     static func createCity(json: JSON) -> CityModel? {
         var city = CityModel()

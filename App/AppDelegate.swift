@@ -10,11 +10,33 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
+    var storyboard: UIStoryboard?
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+      
+//        let userDefaults = UserDefaults.standard
+//
+//        if !userDefaults.bool(forKey: "hasShownIntroScreen") {
+//
+//            userDefaults.set(true, forKey: "hasShownIntroScreen")
+//            userDefaults.synchronize()
+//
+//           //first launch
+//            let storyboard = UIStoryboard(name: "IntroViewController", bundle: nil)
+//            let introViewController = storyboard.instantiateViewController(withIdentifier: "IntroViewController")
+//            self.window?.rootViewController = introViewController
+//            self.window?.makeKeyAndVisible()
+//        } else {
+//           //second launch
+//            let storyboard = UIStoryboard(name: "HomeViewController", bundle: nil)
+//            let mainViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+//            self.window?.rootViewController = mainViewController
+//            self.window?.makeKeyAndVisible()
+//        }
+    
         return true
     }
 

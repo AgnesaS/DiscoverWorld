@@ -36,6 +36,7 @@
 		4DDA035829DE1D4700934E29 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDA035629DE1D4700934E29 /* CityCell.swift */; };
 		4DDA035929DE1D4700934E29 /* CityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DDA035729DE1D4700934E29 /* CityCell.xib */; };
 		4DE74EE42A0A7D79006F652B /* AppCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4DE74EE22A0A7D79006F652B /* AppCoreData.xcdatamodeld */; };
+		4DE74EE62A0A9B16006F652B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE74EE52A0A9B16006F652B /* Constants.swift */; };
 		5727C31163D207E5703BE203 /* Pods_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43B2FC948346A8B41A1BD812 /* Pods_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		4DDA035629DE1D4700934E29 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		4DDA035729DE1D4700934E29 /* CityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityCell.xib; sourceTree = "<group>"; };
 		4DE74EE32A0A7D79006F652B /* AppCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppCoreData.xcdatamodel; sourceTree = "<group>"; };
+		4DE74EE52A0A9B16006F652B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D612568D20F943A18AE3BFCA /* Pods-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App.release.xcconfig"; path = "Target Support Files/Pods-App/Pods-App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4D2655F72A03E2C200B4451B /* AccountManager.swift */,
+				4DE74EE52A0A9B16006F652B /* Constants.swift */,
 			);
 			path = "Account Managaer";
 			sourceTree = "<group>";
@@ -261,7 +264,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4D72633729BF45E2003D0EA8 /* Build configuration list for PBXProject "App" */;
+			buildConfigurationList = 4D72633729BF45E2003D0EA8 /* Build configuration list for PBXProject "DiscoverWorld" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE74EE62A0A9B16006F652B /* Constants.swift in Sources */,
 				4D72636329BFB43D003D0EA8 /* SignupViewController.swift in Sources */,
 				4D13D2A029FA91C1000A781C /* CityRequests.swift in Sources */,
 				4D72635C29BF528A003D0EA8 /* UIView+Extension.swift in Sources */,
@@ -563,7 +567,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4D72633729BF45E2003D0EA8 /* Build configuration list for PBXProject "App" */ = {
+		4D72633729BF45E2003D0EA8 /* Build configuration list for PBXProject "DiscoverWorld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D72634E29BF45E2003D0EA8 /* Debug */,

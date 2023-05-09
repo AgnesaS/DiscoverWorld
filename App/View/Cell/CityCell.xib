@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="406" height="301"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ly6-DL-Rn1">
-                                <rect key="frame" x="0.0" y="0.0" width="406" height="301"/>
+                                <rect key="frame" x="0.0" y="0.0" width="406" height="231"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -29,13 +29,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-aF-78a">
-                                <rect key="frame" x="20" y="107.33333333333333" width="366" height="39.333333333333329"/>
+                                <rect key="frame" x="20" y="91.333333333333329" width="366" height="39.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCe-pl-wF4">
-                                <rect key="frame" x="20" y="146.66666666666666" width="346" height="80"/>
+                                <rect key="frame" x="20" y="130.66666666666666" width="346" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BG2-Hn-G9S">
                                         <rect key="frame" x="0.0" y="0.0" width="266" height="80"/>
@@ -45,14 +45,14 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vi-8e-WDb">
                                         <rect key="frame" x="266" y="0.0" width="80" height="80"/>
-                                        <color key="backgroundColor" red="0.80392158030000005" green="0.98039215800000001" blue="0.5176470876" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="OPo-g2-ejx"/>
                                             <constraint firstAttribute="height" constant="80" id="zMe-3o-ykY"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="arrow.up.right" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="40"/>
@@ -61,23 +61,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="PLY-Ur-eZZ">
-                                <rect key="frame" x="20" y="246.66666666666666" width="366" height="34.333333333333343"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PLY-Ur-eZZ">
+                                <rect key="frame" x="320" y="230.66666666666666" width="66" height="50.333333333333343"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVx-6L-9Wj">
-                                        <rect key="frame" x="0.0" y="0.0" width="104" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zd6-X7-WBu">
-                                        <rect key="frame" x="131" y="0.0" width="104" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="33" height="50.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system" imagePlacement="trailing"/>
+                                        <connections>
+                                            <action selector="rateCityButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dgF-ij-Q6B"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeD-xO-a3D">
-                                        <rect key="frame" x="262" y="0.0" width="104" height="34.333333333333336"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LVx-6L-9Wj">
+                                        <rect key="frame" x="33" y="0.0" width="33" height="50.333333333333336"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="bookmark" catalog="system" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="addToFavoriteButtonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="QGd-Mf-aBL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.71399006622516559" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,6 +89,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ly6-DL-Rn1" firstAttribute="top" secondItem="49x-YO-9Ay" secondAttribute="top" id="0ab-Mr-YG8"/>
+                            <constraint firstAttribute="bottom" secondItem="Ly6-DL-Rn1" secondAttribute="bottom" constant="70" id="1Qx-7y-Dbc"/>
                             <constraint firstItem="cNL-aF-78a" firstAttribute="leading" secondItem="49x-YO-9Ay" secondAttribute="leading" constant="20" id="6x0-iK-Z2m"/>
                             <constraint firstAttribute="bottom" secondItem="PLY-Ur-eZZ" secondAttribute="bottom" constant="20" id="Aoh-ZU-C71"/>
                             <constraint firstAttribute="trailing" secondItem="Ly6-DL-Rn1" secondAttribute="trailing" id="Ipg-c0-M0o"/>
@@ -96,9 +100,8 @@
                             <constraint firstAttribute="trailing" secondItem="cNL-aF-78a" secondAttribute="trailing" constant="20" id="dz3-SY-Ccn"/>
                             <constraint firstAttribute="trailing" secondItem="ZCe-pl-wF4" secondAttribute="trailing" constant="40" id="eOv-09-52X"/>
                             <constraint firstItem="cNL-aF-78a" firstAttribute="leading" secondItem="49x-YO-9Ay" secondAttribute="leading" constant="20" id="fkl-C4-8wQ"/>
-                            <constraint firstAttribute="bottom" secondItem="Ly6-DL-Rn1" secondAttribute="bottom" id="iFh-k9-8Fr"/>
                             <constraint firstAttribute="trailing" secondItem="PLY-Ur-eZZ" secondAttribute="trailing" constant="20" id="p51-Sp-xsU"/>
-                            <constraint firstItem="PLY-Ur-eZZ" firstAttribute="leading" secondItem="49x-YO-9Ay" secondAttribute="leading" constant="20" id="rXK-Sb-II5"/>
+                            <constraint firstItem="PLY-Ur-eZZ" firstAttribute="leading" secondItem="49x-YO-9Ay" secondAttribute="leading" constant="320" id="rXK-Sb-II5"/>
                             <constraint firstItem="PLY-Ur-eZZ" firstAttribute="top" secondItem="ZCe-pl-wF4" secondAttribute="bottom" constant="20" id="wXf-d9-ILA"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -118,17 +121,26 @@
             </constraints>
             <size key="customSize" width="406" height="301"/>
             <connections>
+                <outlet property="addToFavoriteButton" destination="LVx-6L-9Wj" id="KWK-zV-GgL"/>
                 <outlet property="cityImageView" destination="Ly6-DL-Rn1" id="Bjc-p3-5Yf"/>
                 <outlet property="descriptionLabel" destination="BG2-Hn-G9S" id="Hwe-rR-fuz"/>
+                <outlet property="rateCityButton" destination="Zd6-X7-WBu" id="Zpq-Ac-nOV"/>
                 <outlet property="titleLabel" destination="cNL-aF-78a" id="da3-d6-cXN"/>
             </connections>
             <point key="canvasLocation" x="352.67175572519085" y="75.704225352112687"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="arrow.up.right" catalog="system" width="128" height="112"/>
+        <image name="bookmark" catalog="system" width="110" height="128"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
