@@ -22,8 +22,5 @@ class DetailsViewController: UIViewController {
         titleLabel.text = item?.title
         descriptionLabel.text = item?.cityDescription
         categoryLabel.text = item?.category
-        
     }
-    //MARK: IBActions
-
 }

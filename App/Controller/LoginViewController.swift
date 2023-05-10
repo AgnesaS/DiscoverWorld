@@ -19,9 +19,7 @@ class LoginViewController: UIViewController {
 //        super.viewDidLoad()
         emailTextField.text = "agnesasel@gmail.com"
         passwordTextField.text = "12345"
-        
     }
-    
     //MARK: Functions
     func validateFields(){
         guard let email = emailTextField.text, !email.isEmpty else {
@@ -51,7 +49,6 @@ class LoginViewController: UIViewController {
             self.showAlertWith(title: "Discover Europe", message: "Please enter a valid email address".localizableString())
         }
     }
-        
     @IBAction func signupButtonTapped(_ sender: Any) {
         let storyboard = self.storyboard?.instantiateViewController(identifier: "SignupViewController") as! SignupViewController
         self.navigationController?.pushViewController(storyboard, animated: true)

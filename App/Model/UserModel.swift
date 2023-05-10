@@ -14,7 +14,6 @@ struct Images: Codable{
     let total_pages: Int
     let results: [Result]
 }
-
 struct Result: Codable{
     let id: String
     let urls: URLS
@@ -22,13 +21,11 @@ struct Result: Codable{
 struct URLS: Codable{
     let regular: String
 }
-
 struct IntroScreenModel {
     let title: String
     let description: String
     let image: UIImage
 }
-
 struct StateModel{
     let title: String
 }
@@ -48,7 +45,6 @@ struct CityModel {
         if let id = json["id"].int {
             city.id = id
         }
-        
         if let title = json["title"].string {
             city.title = title
         }

@@ -23,7 +23,6 @@ class ImageCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(imageView)

@@ -12,9 +12,8 @@ protocol CityDelegate{
     func addToFavorite(city: CityModel)
     func rateCity(city: CityModel)
 }
-
 class CityCell: UICollectionViewCell {
-
+    //MARK: IBOutles
     @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -26,21 +25,19 @@ class CityCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     func setupCities(_ city:CityModel ){
         self.city = city
         cityImageView.kf.setImage(with: URL(string: city.image ?? ""))
         titleLabel.text = city.title ?? ""
         descriptionLabel.text = city.category ?? ""
-//        emailLabel.text = user.email ?? ""
         
         addToFavoriteButton.setImage(UIImage(systemName: city.isFavorite ? "bookmark.fill" : "bookmark"), for: .normal)
         rateCityButton.setImage(UIImage(systemName: city.isRated ? "star.fill" : "star"), for: .normal)
         rateCityButton.setTitle(city.isRated ? "\(city.rateValue)" : "", for: .normal)
         rateCityButton.isUserInteractionEnabled = city.isRated ? false : true
     }
-
+    //MARK: IBActions
     @IBAction func addToFavoriteButtonPressed(_ sender: Any) {
         if let city = city{
             print("Button tapped")

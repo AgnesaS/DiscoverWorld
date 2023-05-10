@@ -11,7 +11,6 @@ import UIKit
 protocol AccountProtocol: class{
     func userLogout()
 }
-
 class Account: NSObject{
     static let shared = Account()
     weak var delegate: AccountProtocol?

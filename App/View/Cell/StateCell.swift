@@ -8,7 +8,7 @@
 import UIKit
 
 class StateCell: UICollectionViewCell {
-
+    //MARK: IBOutles
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var stateTitleLabel: UILabel!
     var isSelectable: Bool = true
@@ -20,7 +20,7 @@ class StateCell: UICollectionViewCell {
     override var isSelected: Bool{
         didSet{
             if isSelectable{
-              if isSelected{
+                if isSelected{
                     selectCell()
                 }else{
                     deselectCell()
@@ -28,6 +28,7 @@ class StateCell: UICollectionViewCell {
             }
         }
     }
+    //MARK: IBActions
     func selectCell(){
         self.containerView.backgroundColor = .gray
         self.stateTitleLabel.textColor = .white
@@ -43,5 +44,4 @@ class StateCell: UICollectionViewCell {
     func setupStates(_ state: StateModel){
         stateTitleLabel.text = state.title
     }
-
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 class ViewController: UIViewController {
+    //MARK: IBOutles
     @IBOutlet weak var logoImage: UIImageView!
     
     override func viewDidLoad() {

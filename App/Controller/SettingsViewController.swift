@@ -10,10 +10,11 @@ import Photos
 import SafariServices
 
 class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
     //MARK: IBOutles
     @IBOutlet weak var profileImage: UIImageView!
-    
     var imagePicker: UIImagePickerController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupImagePicker()
@@ -33,7 +34,6 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         profileImage.image = selectedImage
         imagePicker?.dismiss(animated: true)
     }
-    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         imagePicker?.dismiss(animated: true)
     }
@@ -53,10 +53,8 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
         self.navigationController?.pushViewController(storyboard, animated: true)
     }
-    
     @IBAction func signOutTapped(_ sender: UITapGestureRecognizer) {
         let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         self.navigationController?.pushViewController(storyboard, animated: true)
     }
-    
 }

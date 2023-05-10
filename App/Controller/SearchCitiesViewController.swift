@@ -8,14 +8,10 @@
 import UIKit
 
 class SearchCitiesViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate {
-    
-  
+    //MARK: -Variables
     private var collectionView: UICollectionView?
-    
     var results: [Result] = []
-    
     let searchbar = UISearchBar()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,19 +30,16 @@ class SearchCitiesViewController: UIViewController, UICollectionViewDataSource, 
         view.addSubview(searchbar)
         collectionView.backgroundColor = .systemBackground
         self.collectionView = collectionView
-        
-       
-        // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setFrames()
     }
+    //MARK: Functions
     func setFrames(){
         searchbar.frame = CGRect(x: 10, y: Int(view.safeAreaInsets.top), width: Int(view.frame.size.width)-20, height: 50)
         collectionView?.frame = CGRect(x: 0, y: view.safeAreaInsets.top+55, width: view.frame.size.width, height: view.frame.size.height-55)
     }
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         if let text = searchBar.text{
@@ -57,7 +50,6 @@ class SearchCitiesViewController: UIViewController, UICollectionViewDataSource, 
     }
     func fetchData(query: String){
         let urlString = "https://api.unsplash.com/search/photos?page=1&per_page=50&query=\(query)&client_id=ioV_jgmX2IywuM8YUgQ56QmXdcPyHLbp_zBt7ztmtKA"
-        
         guard let url = URL(string: urlString) else{
             return
         }
@@ -65,14 +57,12 @@ class SearchCitiesViewController: UIViewController, UICollectionViewDataSource, 
             guard let data = data, error == nil else{
                 return
             }
-            
             do{
                 let jsonResults = try JSONDecoder().decode(Images.self, from: data)
                 DispatchQueue.main.async {
                     self?.results = jsonResults.results
                     self?.collectionView?.reloadData()
                 }
-          
             }catch{
                 print(error)
             }
@@ -80,6 +70,7 @@ class SearchCitiesViewController: UIViewController, UICollectionViewDataSource, 
         }
         task.resume()
     }
+    //MARK: CollectionView Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return results.count
     }
@@ -89,7 +80,7 @@ class SearchCitiesViewController: UIViewController, UICollectionViewDataSource, 
             return UICollectionViewCell()
         }
         cell.configure(with: imageURLString)
-         return cell
+        return cell
     }
 }
 

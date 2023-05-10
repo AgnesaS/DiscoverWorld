@@ -11,19 +11,16 @@ import CoreData
 
 class HomeViewController: UIViewController {
     //MARK: IBOutlets
-    
     @IBOutlet weak var statesCollectionView: UICollectionView!
     @IBOutlet weak var citiesCollectionView: UICollectionView!
     
     var statesArray: [StateModel] = []
     var citiesArray: [CityModel] = []
     var isSelectable = true
-  //  var selectedStateIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
-      
         setupCollectionView()
         setupStates()
         getCities()
@@ -40,7 +37,6 @@ class HomeViewController: UIViewController {
                 print("user last name = \(city.cityDescription ?? "")")
                 print("user email = \(city.category ?? "")")
             }
-            
             if let error = error {
                 print("getUser error = \(error)")
             }
@@ -52,7 +48,6 @@ class HomeViewController: UIViewController {
             self.citiesArray = cities
             self.citiesCollectionView.reloadData()
             self.saveCities()
-          
         }
     }
     //coredata
@@ -71,8 +66,6 @@ class HomeViewController: UIViewController {
                     cityEmo.setValue(city.isFavorite, forKey: "isFavorite")
                     cityEmo.setValue(city.isRated, forKey: "isRated")
                     cityEmo.setValue(city.rateValue, forKey: "rateValue")
-           
-                    
                 }
             }
             do{
@@ -83,7 +76,6 @@ class HomeViewController: UIViewController {
                 print("We save some errors\(error)")
             }
         }
-       
     }
     func getCitiesCoreData(){
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -93,9 +85,9 @@ class HomeViewController: UIViewController {
                 let results = try context.fetch(request)
                 if let resultsArray = results as? [NSManagedObject]{
                     for cityEmo in resultsArray{
-//                        print(cityEmo.value(forKey: "id") ?? 0)
-//                        print(cityEmo.value(forKey: "title") ?? "")
-//                        print("\n")
+                        //                        print(cityEmo.value(forKey: "id") ?? 0)
+                        //                        print(cityEmo.value(forKey: "title") ?? "")
+                        //                        print("\n")
                     }
                 }
             }catch{
@@ -103,9 +95,7 @@ class HomeViewController: UIViewController {
             }
         }
     }
-  
 }
-
 //MARK: CollectionView
 extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func setupCollectionView(){
@@ -124,7 +114,6 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
         }else{
             return citiesArray.count
         }
-        
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == statesCollectionView{
@@ -136,9 +125,6 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
             return cell1
         }else{
             let cell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "CityCell", for: indexPath) as! CityCell
-       //     cell2.layer.borderWidth = 0.3
-           // cell2.layer.borderColor = UIColor.gray.cgColor
-           // cell2.layer.cornerRadius = 20
             cell2.setupCities(citiesArray[indexPath.item])
             cell2.delegate = self
             return cell2
@@ -150,7 +136,6 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
         }
         else {
             return CGSize(width: self.view.frame.width , height: self.view.frame.width )
-            
         }
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -160,13 +145,10 @@ extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSourc
             storyboard.item = selectedItem
             self.navigationController?.pushViewController(storyboard, animated: true)
         }else{
-            
-
+            //statecell
         }
     }
-    
 }
-
 extension HomeViewController: CityDelegate{
     func addToFavorite(city: CityModel) {
         for i in 0...citiesArray.count - 1{
@@ -176,33 +158,22 @@ extension HomeViewController: CityDelegate{
         }
         citiesCollectionView.reloadData()
     }
-    
     func rateCity(city: CityModel) {
         showAlertFor(city: city)
     }
-    
-    
 }
-
 extension HomeViewController{
     func showAlertFor(city: CityModel) {
         let alert = UIAlertController(title: "Rate", message: "How do you rate \(city.title)?", preferredStyle: .alert)
-        
         alert.addTextField { rateTextfield in
             rateTextfield.placeholder = "Enter your rate here"
             rateTextfield.keyboardType = .numberPad
         }
-        
         let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in
         }
         alert.addAction(cancel)
-        
         let rate = UIAlertAction(title: "Rate", style: .default) { _ in
             let rateValue = Int(alert.textFields?[0].text ?? "")
-        
-            //zevendesim per iterim
-//            let filteredRecipe = self.recipesArray.filter ({ $0.id == recipe.id }).first
-            
             for i in 0...self.citiesArray.count - 1 {
                 if city.id == self.citiesArray[i].id {
                     self.citiesArray[i].isRated = true
@@ -213,7 +184,6 @@ extension HomeViewController{
                 }
             }
         }
-        
         alert.addAction(rate)
         self.present(alert, animated: true)
     }

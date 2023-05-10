@@ -25,7 +25,6 @@ class CityRequest: NSObject{
             }
         }
     }
-    
     static func getCities(completionHandler: @escaping(_ cities: [CityModel], _ error: Error?) -> Void) {
         let urlString = "https://fakestoreapi.com/products"
         
