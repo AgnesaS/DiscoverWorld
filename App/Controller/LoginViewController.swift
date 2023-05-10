@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
     @IBAction func loginButtonTapped(_ sender: Any) {
         validateFields()
         if isValidEmail(emailTextField.text ?? "") {
-                let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                let storyboard = self.storyboard?.instantiateViewController(withIdentifier: "SearchCitiesViewController") as! SearchCitiesViewController
                 self.navigationController?.pushViewController(storyboard, animated: true)
             }
         else{

@@ -597,6 +597,23 @@
             </objects>
             <point key="canvasLocation" x="3672.5190839694656" y="655.63380281690149"/>
         </scene>
+        <!--Seach-->
+        <scene sceneID="1vY-zp-Gqa">
+            <objects>
+                <viewController storyboardIdentifier="SearchCitiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wcW-et-2t8" customClass="SearchCitiesViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MO6-3w-xay">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="urv-pg-xtv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Seach" image="magnifyingglass.circle" catalog="system" selectedImage="magnifyingglass.circle.fill" id="u2T-gW-DaG"/>
+                    <navigationItem key="navigationItem" id="UBE-aC-5sJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4P-6e-xT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3949" y="-674"/>
+        </scene>
         <!--Home-->
         <scene sceneID="GGr-xc-uK1">
             <objects>
@@ -1773,17 +1790,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="fxD-1g-llg" kind="relationship" relationship="viewControllers" id="G1b-2q-ZZv"/>
-                        <segue destination="rwD-oA-Z8c" kind="relationship" relationship="viewControllers" id="QUK-UC-KHt"/>
-                        <segue destination="LJh-QK-Pkz" kind="relationship" relationship="viewControllers" id="S0n-iM-Buu"/>
-                        <segue destination="Tz7-F7-qsR" kind="relationship" relationship="viewControllers" id="zHX-W0-dtv"/>
+                        <segue destination="fxD-1g-llg" kind="relationship" relationship="viewControllers" id="vz3-ne-kEp"/>
+                        <segue destination="wcW-et-2t8" kind="relationship" relationship="viewControllers" id="Lii-cL-P2h"/>
+                        <segue destination="rwD-oA-Z8c" kind="relationship" relationship="viewControllers" id="to5-h5-0Bu"/>
+                        <segue destination="LJh-QK-Pkz" kind="relationship" relationship="viewControllers" id="aAQ-ND-i0m"/>
+                        <segue destination="Tz7-F7-qsR" kind="relationship" relationship="viewControllers" id="Vvn-5i-NNN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9c-hy-wm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3317" y="-27"/>
         </scene>
-        <!--Menu-->
+        <!--History-->
         <scene sceneID="pNk-TC-2Wd">
             <objects>
                 <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LJh-QK-Pkz" customClass="MenuViewController" customModule="App" customModuleProvider="target" sceneMemberID="viewController">
@@ -1831,7 +1849,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.15000000596046448" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BHp-cM-XpX">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-Fg-vqm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-Fg-vqm">
                                         <rect key="frame" x="30" y="60" width="333" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -1851,8 +1869,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4G-2d-0jt">
-                                        <rect key="frame" x="30" y="591" width="333" height="61"/>
-                                        <string key="text">Bring this plant with you for immediate joy sparkling around the entire office. If you're bored enough, it will talk back to you.</string>
+                                        <rect key="frame" x="30" y="591" width="333" height="162.33333333333337"/>
+                                        <string key="text">The Belgian landscape has been a major European battleground for centuries, notably in modern times during the Battle of Waterloo (1815) and the 20th century's two world wars. Given its area and population, Belgium today is one of the most heavily industrialized and urbanized countries in Europe.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1893,7 +1911,7 @@
                             <constraint firstItem="xCO-qg-uCJ" firstAttribute="top" secondItem="vQT-EP-Aw4" secondAttribute="top" id="vGT-03-8nh"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Menu" image="menucard" catalog="system" selectedImage="menucard.fill" id="qRz-1X-ty3"/>
+                    <tabBarItem key="tabBarItem" title="History" image="menucard" catalog="system" selectedImage="menucard.fill" id="qRz-1X-ty3"/>
                     <navigationItem key="navigationItem" id="hoM-jn-5gr"/>
                     <connections>
                         <outlet property="containerView" destination="xCO-qg-uCJ" id="R3k-b8-ULt"/>
@@ -2003,7 +2021,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="S0n-iM-Buu"/>
+        <segue reference="aAQ-ND-i0m"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="2" width="750" height="1125"/>
@@ -2020,6 +2038,7 @@
         <image name="location" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="logout1" width="24" height="24"/>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="123"/>
         <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
         <image name="mainlogo" width="750" height="750"/>
         <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>

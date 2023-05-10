@@ -18,17 +18,17 @@ class MenuViewController: UIViewController {
     var menu = false
     var home = CGAffineTransform()
     var options: [option] = [option(title: "Belgium", segue: "Belgium"),
-                             option(title: "Netherland", segue: "Netherland"),
+                             option(title: "Hungary", segue: "Hungary"),
                              option(title: "England", segue: "England"),
                              option(title: "Greece", segue: "Greece"),
+                             option(title: "Kosova", segue: "Kosova"),
+                             option(title: "Canada", segue: "Canada"),
+                             option(title: "Albania", segue: "Albania"),
+                             option(title: "Germany", segue: "Germany"),
+                             option(title: "Poland", segue: "Poland"),
+                             option(title: "Liechtenstein", segue: "Liechtenstein"),
                              option(title: "Luksemburg", segue: "Luksemburg"),
-                             option(title: "Luksemburg", segue: "Luksemburg"),
-                             option(title: "Luksemburg", segue: "Luksemburg"),
-                             option(title: "Luksemburg", segue: "Luksemburg"),
-                             option(title: "Luksemburg", segue: "Luksemburg"),
-                             option(title: "Luksemburg", segue: "Luksemburg"),
-                             option(title: "Luksemburg", segue: "Luksemburg"),
-                             option(title: "Luksemburg", segue: "Luksemburg")
+                             option(title: "Netherlands", segue: "Netherlands")
                             ]
     struct option {
         var title = String()

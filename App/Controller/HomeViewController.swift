@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
         getCities()
     }
     func setupStates(){
-        statesArray = [StateModel(title: "USA"), StateModel(title: "Kosovo"),StateModel(title: "USA"), StateModel(title: "Kosovo"),StateModel(title: "USA"), StateModel(title: "Kosovo"),StateModel(title: "USA"), StateModel(title: "Kosovo"),StateModel(title: "Kosovo"),StateModel(title: "USA"), StateModel(title: "Kosovo")]
+        statesArray = [StateModel(title: "Africa"),StateModel(title: "Europe"),StateModel(title: "Asia"),StateModel(title: "Australia"), StateModel(title: "North America"),StateModel(title: "South America"), StateModel(title: "Antarctica")]
         statesCollectionView.reloadData()
     }
     func getCity(){
