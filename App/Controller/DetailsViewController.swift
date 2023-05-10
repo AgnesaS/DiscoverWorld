@@ -20,7 +20,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         imageView.kf.setImage(with: URL(string: item?.image ?? ""))
         titleLabel.text = item?.title
-        descriptionLabel.text = item?.productDescription
+        descriptionLabel.text = item?.cityDescription
         categoryLabel.text = item?.category
         
     }

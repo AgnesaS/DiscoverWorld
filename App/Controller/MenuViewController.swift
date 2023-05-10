@@ -106,7 +106,6 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
                 currentCell.alpha = 1
             })
             
-            // optional: perform a segue when tapped
             
 //             self.parent?.performSegue(withIdentifier: options[indexPath.row].segue, sender: self)
             

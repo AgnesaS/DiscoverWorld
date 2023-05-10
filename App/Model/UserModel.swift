@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 import SwiftyJSON
-struct APIResponse: Codable{
+
+struct Images: Codable{
     let total: Int
     let total_pages: Int
     let results: [Result]
@@ -34,8 +35,7 @@ struct StateModel{
 struct CityModel {
     var id: Int?
     var title: String?
-    var price: Double?
-    var productDescription: String?
+    var cityDescription: String?
     var category: String?
     var image: String?
     var isFavorite: Bool = false
@@ -53,7 +53,7 @@ struct CityModel {
             city.title = title
         }
         if let productDescription = json["description"].string {
-            city.productDescription = productDescription
+            city.cityDescription = productDescription
         }
         if let category = json["category"].string{
             city.category = category

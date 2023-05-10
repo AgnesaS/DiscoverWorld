@@ -40,6 +40,9 @@ class SearchCitiesViewController: UIViewController, UICollectionViewDataSource, 
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        setFrames()
+    }
+    func setFrames(){
         searchbar.frame = CGRect(x: 10, y: Int(view.safeAreaInsets.top), width: Int(view.frame.size.width)-20, height: 50)
         collectionView?.frame = CGRect(x: 0, y: view.safeAreaInsets.top+55, width: view.frame.size.width, height: view.frame.size.height-55)
     }
@@ -64,7 +67,7 @@ class SearchCitiesViewController: UIViewController, UICollectionViewDataSource, 
             }
             
             do{
-                let jsonResults = try JSONDecoder().decode(APIResponse.self, from: data)
+                let jsonResults = try JSONDecoder().decode(Images.self, from: data)
                 DispatchQueue.main.async {
                     self?.results = jsonResults.results
                     self?.collectionView?.reloadData()

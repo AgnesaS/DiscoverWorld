@@ -7,6 +7,7 @@
 
 import UIKit
 import ViewAnimator
+import CoreData
 
 class HomeViewController: UIViewController {
     //MARK: IBOutlets
@@ -36,7 +37,7 @@ class HomeViewController: UIViewController {
             if let city = city {
                 print("user id = \(city.id ?? 0)")
                 print("user name = \(city.title ?? "")")
-                print("user last name = \(city.productDescription ?? "")")
+                print("user last name = \(city.cityDescription ?? "")")
                 print("user email = \(city.category ?? "")")
             }
             
@@ -50,6 +51,56 @@ class HomeViewController: UIViewController {
             guard error == nil else { return }
             self.citiesArray = cities
             self.citiesCollectionView.reloadData()
+            self.saveCities()
+          
+        }
+    }
+    //coredata
+    func saveCities(){
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = appDelegate?.persistentContainer.viewContext{
+            if let entity = NSEntityDescription.entity(forEntityName: "CityEntity", in: context){
+                
+                for city in citiesArray {
+                    print("success")
+                    let cityEmo = NSManagedObject(entity: entity, insertInto: context)
+                    cityEmo.setValue(city.id, forKey: "id")
+                    cityEmo.setValue(city.title, forKey: "title")
+                    cityEmo.setValue(city.cityDescription, forKey: "cityDescription")
+                    cityEmo.setValue(city.image, forKey: "image")
+                    cityEmo.setValue(city.isFavorite, forKey: "isFavorite")
+                    cityEmo.setValue(city.isRated, forKey: "isRated")
+                    cityEmo.setValue(city.rateValue, forKey: "rateValue")
+           
+                    
+                }
+            }
+            do{
+                try context.save()
+                getCitiesCoreData()
+            }
+            catch{
+                print("We save some errors\(error)")
+            }
+        }
+       
+    }
+    func getCitiesCoreData(){
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        if let context = appDelegate?.persistentContainer.viewContext{
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CityEntity")
+            do{
+                let results = try context.fetch(request)
+                if let resultsArray = results as? [NSManagedObject]{
+                    for cityEmo in resultsArray{
+//                        print(cityEmo.value(forKey: "id") ?? 0)
+//                        print(cityEmo.value(forKey: "title") ?? "")
+//                        print("\n")
+                    }
+                }
+            }catch{
+                print("Couldn't get employyes")
+            }
         }
     }
   
