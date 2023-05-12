@@ -4,21 +4,21 @@
   Help users plan their trips around the world by providing information on destinations, attractions, activities, and accommodations.
   
 ## Features:
-   **Login and Signup**: Users can create an account by providing basic information such as their name, email address, and a password.<br> 
-   **Places Listings**: A feature that displays a list of places you can visit.
+   -**Login and Signup**: Users can create an account by providing basic information such as their name, email address, and a password.<br> 
+   -**Places Listings**: A feature that displays a list of places you can visit.
 <br> 
-   **Destination Guides**: The app may provide detailed information about popular travel destinations around the world, including attractions, local customs, and practical tips.
+   -**Destination Guides**: The app may provide detailed information about popular travel destinations around the world, including attractions, local customs, and practical tips.
 <br> 
-   **Country Search**: Users can search for specific countries and access a gallery of pictures related to that country. They can explore popular landmarks, landscapes, culture, and people through a visually appealing interface.
+   -**Country Search**: Users can search for specific countries and access a gallery of pictures related to that country. They can explore popular landmarks, landscapes, culture, and people through a visually appealing interface.
 <br> 
-   **Location Search within Countries**: Users can search for specific locations within a country, such as cities, landmarks, or natural attractions. 
+   -**Location Search within Countries**: Users can search for specific locations within a country, such as cities, landmarks, or natural attractions. 
 <br> 
-   **Settings**: Users can manage their account settings, including notification preferences, and privacy settings.
+   -**Settings**: Users can manage their account settings, including notification preferences, and privacy settings.
 
 # CONFIGURATION
 ## IDE
 
-The project is developed using Xcode as an IDE and Swift as a programming language.
+The project is developed using Xcode(Version 14.3) as an IDE and Swift as a programming language.
 
 # SCREENSHOTS
  ## ⚡Splash Screen
