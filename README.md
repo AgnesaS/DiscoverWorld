@@ -27,7 +27,7 @@ The project is developed using Xcode as an IDE and Swift as a programming langua
 
 <br><br>
  ## ⚡Intro Screen
-![Uploading Simulator Screenshot![Simulator Screenshot - iPhone 14 Pro - 2023-05-12 at 14 32 27](https://github.com/AgnesaS/DiscoverWorld/assets/44116298/6a8c6aca-1164-43c1-8684-02fa3e8ef803){:width="300" height="500"}![Simulator Screenshot - iPhone 14 Pro - 2023-05-12 at 14 32 27](https://github.com/AgnesaS/DiscoverWorld/assets/44116298/97c9b4c9-5dbd-41f6-8518-96ad02fb660a)![Simulator Screenshot - iPhone 14 Pro - 2023-05-12 at 14 32 29](https://github.com/AgnesaS/DiscoverWorld/assets/44116298/91297e17-681c-4cb3-8ce7-83909a6038fc)
+![Uploading Simulator Screenshot![Simulator Screenshot - iPhone 14 Pro - 2023-05-12 at 14 32 27](https://github.com/AgnesaS/DiscoverWorld/assets/44116298/6a8c6aca-1164-43c1-8684-02fa3e8ef803){:width="300px" height="500px"}![Simulator Screenshot - iPhone 14 Pro - 2023-05-12 at 14 32 27](https://github.com/AgnesaS/DiscoverWorld/assets/44116298/97c9b4c9-5dbd-41f6-8518-96ad02fb660a)![Simulator Screenshot - iPhone 14 Pro - 2023-05-12 at 14 32 29](https://github.com/AgnesaS/DiscoverWorld/assets/44116298/91297e17-681c-4cb3-8ce7-83909a6038fc)
  
 
 <br><br>
