@@ -22,7 +22,8 @@ The project is developed using Xcode as an IDE and Swift as a programming langua
 
 # SCREENSHOTS
  ## ⚡Splash Screen
- <img src="![Simulator Screenshot - iPhone 14 Pro - 2023-05-12 at 14 32 22](https://github.com/AgnesaS/DiscoverWorld/assets/44116298/cc34b46b-e08d-4e52-97ec-91914648f4ab)" width="300" height="500/">
+ <img src="![Simulator Screenshot - iPhone 14 Pro - 2023-05-12 at 14 14 59](https://github.com/AgnesaS/DiscoverWorld/assets/44116298/60f714e6-b7f1-43e3-bb5c-a7afbf764cc7)" width="300" height="500/">
+  <img src=" ![Simulator Screenshot - iPhone 14 Pro - 2023-05-12 at 14 32 22](https://github.com/AgnesaS/DiscoverWorld/assets/44116298/8169a1ba-edfd-47b7-b4ec-1f9f3ae7be72)" width="300" height="500/">
  
 
 <br><br>
